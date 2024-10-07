@@ -1,0 +1,70 @@
+:root {
+  --icons-color: #4c5773;
+  --icons-light-color: #4c577341;
+  --icon-bg-color: #e2e6e9;
+  --shadow-dark-color: #d3dae7;
+  --shadow-light-color: #fff;
+  --main-bg-color: #ecf0f3;
+
+  --box-shadow: 1rem 1rem 1rem var(--shadow-dark-color), 1rem 1rem 1rem var(--shadow-dark-color);
+
+  --box-shadow-2: 0rem 0rem 0rem var(--shadow-dark-color), -.3rem -.3rem 1rem var(--shadow-dark-color);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  background-color: var(--main-bg-color);
+  color: var(--icons-color);
+  /*font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Helvetica Neue, sans-serif;*/
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: none;
+}
+
+::selection {
+  color: var(--shadow-dark-color);
+  background: var(--icons-color);
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+  border: 1px solid var(--main-bg-color);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: var(--main-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2rem;
+  background-color: var(--icons-color);
+  width: .5rem;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
